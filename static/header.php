@@ -21,6 +21,6 @@ $sss= $_SESSION['usuario'];
         <nav>
             <a href="../index.php">Inicio</a>
             <a href="grupos.php">Grupos</a>
-            <a href="eventos.php">Eventos</a>
+            
         </nav>
     </div>
