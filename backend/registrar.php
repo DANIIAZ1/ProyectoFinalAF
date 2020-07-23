@@ -23,9 +23,9 @@ try {
         );
         echo '<script type="text/javascript">
         alert("Registro exitoso!.");
-        location.href="../frontend/login.html";
+        location.href="../frontend/log.php";
         </script>';
-        //header("Location: ../frontend/login.html");
+        //header("Location: ../frontend/log.php");
     }  else {
         $respuesta = array(
             'respuesta' => 'error'

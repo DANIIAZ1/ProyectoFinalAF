@@ -1,3 +1,16 @@
+<?php
+session_start();
+error_reporting(0);
+
+$sss = $_SESSION['usuario'];
+if($sss != null || $sss != '') {
+    echo'<script type="text/javascript">
+            alert("Ya hay una sesión iniciada.");
+            location.href="perfil.php";
+        </script>';
+    die();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,7 +29,7 @@
     <div class="header">
         <nav>
             <a href="../index.php">Inicio</a>
-            <a href="grupos.php">Grupos</a>
+            <a href="../backend/grupos.php">Grupos</a>
             
         </nav>
         </div>

@@ -1,6 +1,5 @@
 <?php 
-include '../static/header.php';
-$user= $_SESSION['usuario'];
+
 
 function obtenerProyectos() {
   include 'conexion.php';
@@ -27,6 +26,13 @@ function obtenerProyectos() {
     <title>Perfil</title>
 </head>
 <body>
+  <div class="header">
+  <nav>
+      <a href="../index.php">Inicio</a>
+      <a href="../frontend/perfil.php">Perfil</a>
+      <a href="salir.php">Cerrar sesión</a>
+  </nav>
+  </div>
 <div class= perfil>
     <h1 class="text-center">Grupos</h1>
     </div>

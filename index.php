@@ -26,7 +26,7 @@
         <div class="contenido-hero">
             <h1>Monitoreo de Actividad Física</h1>
             <p> <i class="fas fa-walking"></i></i> <strong>Haz siempre un esfuerzo total, aún cuando las probabilidades están en contra tuya. Arnold Palmer </strong> <i class="fas fa-running"></i></p>
-            <a class="boton" href="frontend/login.html">Iniciar Sesión</a>
+            <a class="boton" href="frontend/log.php">Iniciar Sesión</a>
             <a class="boton" href="#contacto">Regístrate</a>
         </div>
     </div>
@@ -86,7 +86,7 @@
                         <input type="submit" class="boton" value="Crear cuenta">
                     </div>
                     <div class="enviar">
-                        <a class="boton2" href="frontend/login.html">Iniciar Sesión</a>
+                        <a class="boton2" href="frontend/log.php">Iniciar Sesión</a>
                     </div>
                     
                 </div><!--.contenedor-campos-->

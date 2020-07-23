@@ -1,7 +1,7 @@
 <?php 
 include '../static/header.php';
 $user= $_SESSION['usuario'];
-echo "<script>alert('Bienvenido!  Ha iniciado sesión correctamente')</script>";
+
 ?> 
 <!DOCTYPE html>
 <html lang="es">
@@ -22,33 +22,31 @@ echo "<script>alert('Bienvenido!  Ha iniciado sesión correctamente')</script>";
     <div class="enviar">
         <a class="boton" href="../backend/grupos.php">Listar grupos</a>
     </div>
+    <div class="enviar">
+        <a class="boton" href="eventos.php">Listar eventos</a>
+    </div>
                     
     </div>
     <div id="ingresar" class="contacto2"> 
-            <h2>Registro de grupo</h2>
-            <form id="formulario" class=" caja-login" method="POST" action="../backend/addgrupo.php"> 
+            <h2>Registro de Evento</h2>
+            <form id="formulario" class=" caja-login" method="POST" action="../backend/addevento.php"> 
                 <legend>Diligencia todos los campos</legend>
 
-                <div class="contenedor-campos">
+                <div class="contenedor-campos text-light">
                     <div class="campo">
                     <i class="fas fa-users"></i>
                         <label for="nombre">&nbsp Nombre: </label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre del grupo" required="required">
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre del evento" required="required "class="form-control">
                     </div>
                     <div class="campo">
-                    <i class="fas fa-user-circle"></i>
-                        <label for="monitor">&nbsp Monitor: </label>
-                        <input type="text" name="monitor" id="monitor" placeholder="Monitor" required="required">
-                    </div>
-                    <div class="campo">
-                    <i class="far fa-clock"></i>
-                        <label for="descripcion">&nbsp Info: </label>
-                        <input type="text-area" name="descripcion" id="descripcion" placeholder="Descripción" required="required">
+                    <i class="fas fa-info-circle"></i>
+                        <label for="descripcion"> &nbsp Info: </label>
+                        <input type="text-area" name="descripcion" id="descripcion" placeholder="Descripción" required="required" class="form-control">
                     </div>
                     
                     <div class="enviar">
                         <input type="hidden" id="tipo" value="crear">
-                        <input type="submit" class="boton" value="Crear grupo">
+                        <input type="submit" class="boton" value="Crear Evento">
                     </div>
                 </div>
                

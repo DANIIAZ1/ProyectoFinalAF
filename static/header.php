@@ -11,7 +11,7 @@ $sss= $_SESSION['usuario'];
 
     <?php }else{ echo '<script type="text/javascript">
         alert("Por favor inicie sesión primero.");
-        location.href="../frontend/login.html";
+        location.href="../frontend/log.php";
         </script>'; }?>
 
         <nav>

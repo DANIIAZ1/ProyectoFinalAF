@@ -24,7 +24,9 @@ try {
                 'nombre' => $nombre_usuario
                                 
             );
+            echo "<script>alert('Bienvenido!  Ha iniciado sesión correctamente')</script>";
             header("Location: ../frontend/perfil.php");// redirige a perfil
+
         } else {
             // Login incorrecto, enviar error
             $respuesta = array(
