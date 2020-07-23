@@ -79,15 +79,7 @@
                         <input type="password" name="password" id="password" placeholder="Password" required="required">
                     </div>
                     <div class="input-group row" >
-                        <div class="col">
-                            <label>cliente</label>
-                            <input type="checkbox" id="chekbox1" >
-                        </div>
-                        <div class="col">
-                            <label>Monitor</label>
-                            <input type="checkbox" id="chekbox2" >
-                        </div>
-                        
+                                               
                     </div>
                     <div class="enviar">
                         <input type="hidden" id="tipo" value="crear">

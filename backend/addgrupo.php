@@ -16,6 +16,10 @@ try {
             'id_insertado' => $stmt->insert_id,
             'nombre_grupo' => $nom
         );
+        
+       
+     
+        echo $nom.';'.$mon.';'.$des;
     }  else {
         $respuesta = array(
             'respuesta' => 'error'
@@ -30,4 +34,4 @@ try {
     );
 }
 
-echo json_encode($respuesta);
+?> 

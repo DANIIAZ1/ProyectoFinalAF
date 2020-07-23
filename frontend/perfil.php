@@ -19,6 +19,10 @@ echo "<script>alert('Bienvenido!  Ha iniciado sesión correctamente')</script>";
 <body>
     <div class= "sidenav">
     <h4> <strong>Perfil de <?php echo $user ?></strong></h4>
+    <div class="enviar">
+        <a class="boton" href="../backend/grupos.php">Listar grupos</a>
+    </div>
+                    
     </div>
     <div id="ingresar" class="contacto2"> 
             <h2>Registro de grupo</h2>
@@ -46,10 +50,10 @@ echo "<script>alert('Bienvenido!  Ha iniciado sesión correctamente')</script>";
                         <input type="hidden" id="tipo" value="crear">
                         <input type="submit" class="boton" value="Crear grupo">
                     </div>
-                </div><!--.contenedor-campos-->
+                </div>
                
             </form>
-        </div>
+    </div>
 
     
 </body>

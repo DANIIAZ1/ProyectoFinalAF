@@ -30,7 +30,7 @@ function obtenerProyectos() {
 <div class= perfil>
     <h1 class="text-center">Grupos</h1>
     </div>
-    <table class="table">
+    <table id= "tablaReg" class="table">
   <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
@@ -59,6 +59,66 @@ function obtenerProyectos() {
   </ul>
 </div>
 
+
+<div id="formulario" class=" caja-login card"> 
+    <legend>Diligencia todos los campos</legend>
+
+    <div class="contenedor-campos">
+        <div class="campo">
+        <i class="fas fa-users"></i>
+            <label for="nombre">&nbsp Nombre: </label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre del grupo" required="required">
+        </div>
+        <div class="campo">
+        <i class="fas fa-user-circle"></i>
+            <label for="monitor">&nbsp Monitor: </label>
+            <input type="text" name="monitor" id="monitor" placeholder="Monitor" required="required">
+        </div>
+        <div class="campo">
+        <i class="far fa-clock"></i>
+            <label for="descripcion">&nbsp Info: </label>
+            <input type="text-area" name="descripcion" id="descripcion" placeholder="Descripción" required="required">
+        </div>
+        
+        <div class="enviar">
+            <input type="hidden" id="tipo" value="crear">
+            <input type="button" onClick="regGrupo();" class="boton" value="Crear grupo">
+        </div>
+    </div>
+    
+  </div>
+
+
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  function regGrupo(){
+    
+    var nombre    = document.getElementById("nombre").value;
+    var monitor   = document.getElementById("monitor").value;
+    var desc      = document.getElementById("descripcion").value;
+    var datainfo = { nombre: nombre, monitor:monitor, descripcion:desc };
+    console.log("EnviarTXT: "+JSON.stringify(datainfo));
+    
+
+    $.ajax({
+        method: "POST",
+        url: "addgrupo.php",
+        data: datainfo,
+        success (res){
+            console.log(res);
+           var td=res.split(";");
+           
+           document.getElementById("tablaReg").insertRow(-1).innerHTML = 
+          "<tr><th scope=\"row\">#</th><td>"+td[0]+"</td><td>"+td[1]+"</td><td>"+td[2]+"</td></th>";
+
+        }
+    });
+    document.getElementById("nombre").value='';
+    document.getElementById("monitor").value='';
+    document.getElementById("descripcion").value='';
+}
+
+</script>
 
 
