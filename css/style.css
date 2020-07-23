@@ -24,7 +24,7 @@ body {
 h2, h3 {
     text-align: center;
 }
-h3 {
+h3,h3 {
     color: var(--secundario);
     font-weight: 400;
     font-size: 1.6rem;
@@ -57,9 +57,10 @@ h3 {
     }
 }
 .header nav a{
-    color: var(--oscuro);
+    color: var(--secundario);
     text-decoration: none;
     font-size: 1.4rem;
+    font-weight: 700;
     margin-bottom: 2rem;
 }
 .header nav a:last-of-type {
@@ -232,6 +233,39 @@ body {
   }
   .btn-login{
       margin-left: auto;
-      margin-right: auto;
-      
+      margin-right: auto;   
+  }
+  
+  h4{
+      text-align: start;
+  }
+  .sidenav{
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 70; /* Stay at the top */
+    left: 0;
+    background-color: rgba(5, 57, 126, 0.548); /* Black */
+    border-radius: 6px;
+    border: 1px solid #1587d3a8;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+  }
+
+  /* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Style page content */
+  .main {
+    margin-left: 160px; /* Same as the width of the sidebar */
+    padding: 0px 10px;
+  }
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
   }
