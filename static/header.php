@@ -16,7 +16,7 @@ $sss= $_SESSION['usuario'];
 
         <nav>
             <a href="../index.php">Inicio</a>
-            <a href="grupos.php">Grupos</a>
+            <a href="../backend/grupos.php">Grupos</a>
             <a href="../backend/salir.php">Cerrar sesión</a>
         </nav>
     </div>
